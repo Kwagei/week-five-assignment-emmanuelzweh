@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="div1">
+            <h1 id="heading1">Number guessing game</h1>
+            <div id="instruction-div">
+                <input type="button" id="intBtn" onclick="displayInstruction()" value="Game Instruction">
+                <div id="instruct_display">
+                    <ul>
+                        <li>U are to guesss a number</li>
+                        <li>Number guessed should range from 0&nbsp;-&nbsp;100 only</li>
+                        <li>U have 10 chances given</li>
+                    </ul>
+                    <button id="closeBtn" onclick="hideInstruction()">close</button>
+                </div>
+            </div>
+            <button id="playBtn" onclick="startGame()">Play</button>
+        </div>
+        <div id="div2">
+            <form action="" method="post">
+                <input type="text" id="guessInput" required>
+                <br><br>
+                <input type="button" id="entBtn" value="Enter" onclick="enter()">
+            </form>
+            <div id="display-outcome">
+                <h3 id="guess-number-result"></h3>
+                <h3 id="chances-remain">Chances: </h3>
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>
