@@ -24,21 +24,22 @@ function enter(){
     var randomNum = Math.floor(Math.random() * 100)+1;
     var inputValue = document.getElementById("guessInput").value;
     var numberGuessed = Number(inputValue);
-    var chances;
+    var chances = 10;
     
 
-    for (chances = 10; chances >= 0; chances--){
+    // for (chances = 10; chances >= 0; chances--){
         document.getElementById("display-outcome").style = "display: block";
         if(numberGuessed == randomNum){
             document.getElementById("guess-number-result").textContent = "YOU WIN !!!!!!";
-            break;
         }
         else if(numberGuessed > randomNum){
             document.getElementById("guess-number-result").textContent = "Guessed too high";
+            chances--;
             document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
         } 
         else if(numberGuessed < randomNum){
             document.getElementById("guess-number-result").textContent = "Guessed too low";
+            chances--;
             document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
         }
 
@@ -47,11 +48,12 @@ function enter(){
         }
         else{
             document.getElementById("guess-number-result").textContent = "Invalid input";
+            chances--;
             document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
         }
         
 
     }
 
-}
+// }
 
