@@ -16,7 +16,7 @@ function startGame(){
 }
 
 function enter(){
-    var randomNum = Math.floor(Math.random(1) * 100);
+    var randomNum = Math.floor(Math.random() * 100)+1;
     var inputValue = document.getElementById("guessInput").value;
     var chances;
     
@@ -29,18 +29,15 @@ function enter(){
         }
         else if(inputValue > randomNum){
             document.getElementById("guess-number-result").textContent = "Guessed too high";
-        }
+            document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
+        } 
         else if(inputValue < randomNum){
             document.getElementById("guess-number-result").textContent = "Guessed too low";
-        }
-        else if(inputValue == NaN){
-            document.getElementById("guess-number-result").textContent = "Invalid input";
-        }
-        else if(inputValue == " "){
-            document.getElementById("guess-number-result").textContent = "Invalid input";
+            document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
         }
         else{
-            document.getElementById("guess-number-result").textContent = "YOU LOSE!!!!";
+            document.getElementById("guess-number-result").textContent = "Invalid input";
+            document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
         }
         
 
