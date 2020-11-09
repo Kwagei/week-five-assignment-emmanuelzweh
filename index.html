@@ -11,10 +11,11 @@
         <div id="div1">
             <h1 id="heading1">Number guessing game</h1>
             <div id="instruction-div">
-                <input type="button" id="intBtn" onclick="displayInstruction()" value="Game Instruction">
+                <input type="button" id="intBtn" onclick="displayInstruction()" value="Instructions">
                 <div id="instruct_display">
                     <ul>
-                        <li>U are to guesss a number</li>
+                        <li>The computer has generated a number</li>
+                        <li>U are to guesss that number</li>
                         <li>Number guessed should range from 0&nbsp;-&nbsp;100 only</li>
                         <li>U have 10 chances given</li>
                     </ul>
@@ -25,6 +26,7 @@
         </div>
         <div id="div2">
             <form action="" method="post">
+                <button id="backBtn" onclick="goBack()">Back</button>
                 <input type="text" id="guessInput" required>
                 <br><br>
                 <input type="button" id="entBtn" value="Enter" onclick="enter()">
