@@ -206,5 +206,9 @@ ul li {
     margin-top: 5%;
 }
 
+#guesses {
+    display: none;
+}
+
 
 

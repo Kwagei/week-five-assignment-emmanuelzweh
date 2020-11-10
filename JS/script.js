@@ -50,10 +50,12 @@ function enter(){
         chances--;
         document.getElementById("chances-remain").innerHTML = "Chances" + " " + chances;
     }
-    if(chances < 0){
+    if(chances <= 0){
         document.getElementById("game-end-statement").textContent = "YOU LOSE!!!!";
         document.getElementById("end-result").style = "display: block";
         document.getElementById("div2").style = "display: none";
+
+        // document.getElementById("guesses").style = "display: block";
     }
         
 
