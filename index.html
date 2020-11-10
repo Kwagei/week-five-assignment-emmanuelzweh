@@ -25,16 +25,21 @@
             <button id="playBtn" onclick="startGame()">Play</button>
         </div>
         <div id="div2">
-            <form action="" method="post">
+            <!-- <form> -->
                 <button id="backBtn" onclick="goBack()">Back</button>
                 <input type="text" id="guessInput" required>
                 <br><br>
                 <input type="button" id="entBtn" value="Enter" onclick="enter()">
-            </form>
+            <!-- </form> -->
             <div id="display-outcome">
                 <h1 id="guess-number-result"></h1>
                 <h3 id="chances-remain"></h3>
             </div>
+        </div>
+        <div id="end-result">
+            <h1 id="game-end-statement"></h1>
+            <button onclick="playAgain()">Play Again</button>
+            <button onclick="backHome()">Home</button>
         </div>
     </div>
     <script src="JS/script.js"></script>

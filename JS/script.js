@@ -1,3 +1,6 @@
+//Random number generated
+var randomNum = Math.floor(Math.random() * 100)+1;
+
 // instruction for the game
 function displayInstruction(){
     document.getElementById("instruct_display").style = "display: block";
@@ -21,7 +24,6 @@ function goBack(){
 }
 
 function enter(){
-    var randomNum = Math.floor(Math.random() * 100)+1;
     var inputValue = document.getElementById("guessInput").value;
     var numberGuessed = Number(inputValue);
     var chances = 10;
@@ -30,7 +32,10 @@ function enter(){
     // for (chances = 10; chances >= 0; chances--){
         document.getElementById("display-outcome").style = "display: block";
         if(numberGuessed == randomNum){
-            document.getElementById("guess-number-result").textContent = "YOU WIN !!!!!!";
+            document.getElementById("game-end-statement").textContent = "YOU WIN !!!!!!";
+            document.getElementById("end-result").style = "display: block";
+            document.getElementById("div2").style = "display: none";
+            
         }
         else if(numberGuessed > randomNum){
             document.getElementById("guess-number-result").textContent = "Guessed too high";
@@ -44,7 +49,9 @@ function enter(){
         }
 
         else if(chances == 0){
-            document.getElementById("guess-number-result").textContent = "YOU LOSE!!!!";
+            document.getElementById("game-end-statement").textContent = "YOU LOSE!!!!";
+            document.getElementById("end-result").style = "display: block";
+            document.getElementById("div2").style = "display: none";
         }
         else{
             document.getElementById("guess-number-result").textContent = "Invalid input";
@@ -53,6 +60,18 @@ function enter(){
         }
         
 
+    }
+
+    function playAgain(){
+        document.getElementById("div2").style = "display: block";
+        document.getElementById("end-result").style = "display: none";
+    }
+
+    function backHome(){
+        document.getElementById("div1").style = "display: block";
+        document.getElementById("end-result").style = "display: none";
+        document.getElementById("div2").style = "display: none";
+        
     }
 
 // }
